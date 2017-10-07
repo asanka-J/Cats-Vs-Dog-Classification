@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction</title>
+    <style>
+           #input_img { height: 500; width: 600px; overflow: hidden; }     
+            .container  {
+              display: flex;
+              position: absolute;
+              top: 0;
+              left: 0;
+              height: 100%;
+              width: 100%;
+            }
+            
+            .container .row {
+              margin: 0 auto;
+            }
+
+</style>
+    
+</head>
+<body>
+
+
+
+
+<div class="container">
+  <div class="row valign-wrapper">
+    <div class="col s6 offset-s3 valign">
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title"></span>
+         
+            <div class="fill">
+                   <img id="input_img" src="{{url_for('send_image', filename=image_name)}}" alt="">
+              </div>
+              
+          
+        </div>
+        <div class="card-action">
+          <h1 style="font-family: 'Source Sans Pro'">{{prediction}}</h1>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+</body>
+</html>
+
